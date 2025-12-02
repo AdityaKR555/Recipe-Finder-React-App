@@ -88,7 +88,8 @@ useEffect(() => {
               Search recipes to begin...
             </p>
             <img
-              src="../../public/Kitchen appliances-rafiki.svg"
+              // src="../../public/Kitchen appliances-rafiki.svg"
+              src="/Kitchen appliances-rafiki.svg"
               alt="kitchen-svg"
               className="w-[35%]"
             />
