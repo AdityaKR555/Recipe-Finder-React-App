@@ -11,14 +11,34 @@ const Home = () => {
   const navigate = useNavigate();
 
   
+// useEffect(() => {
+//   const recipeData = localStorage.getItem("recipeData");
+
+//   if (recipeData) {
+//     try {
+//       setRecipes(JSON.parse(recipeData));
+//     } catch (e) {
+//       console.error("Invalid JSON in localStorage:", e);
+//     }
+//   }
+// }, []);
+
+
+// useEffect(() => {
+//   if (recipes) {
+//     localStorage.setItem("recipeData", JSON.stringify(recipes));
+//   }
+// }, [recipes]);
+
+
 useEffect(() => {
-  const recipeData = localStorage.getItem("recipeData");
+  const recipeData = sessionStorage.getItem("recipeData");
 
   if (recipeData) {
     try {
       setRecipes(JSON.parse(recipeData));
     } catch (e) {
-      console.error("Invalid JSON in localStorage:", e);
+      console.error("Invalid JSON in sessionStorage:", e);
     }
   }
 }, []);
@@ -26,9 +46,10 @@ useEffect(() => {
 
 useEffect(() => {
   if (recipes) {
-    localStorage.setItem("recipeData", JSON.stringify(recipes));
+    sessionStorage.setItem("recipeData", JSON.stringify(recipes));
   }
 }, [recipes]);
+
 
   const searchItem = async (e) => {
     e.preventDefault();
