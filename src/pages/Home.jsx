@@ -73,29 +73,29 @@ useEffect(() => {
     <div className="bg-cyan-50 pb-10 min-h-screen">
       {/* .........input.......... */}
       <div>
-        <h1 className="text-3xl md:text-5xl font-bold text-center mt-10 text-cyan-950">
+        <h1 className="text-2xl md:text-5xl font-bold text-center mt-10 text-cyan-950">
           Welcome to RecipeFinder
         </h1>
-        <p className="text-center mt-4 text-md md:text-lg text-black font-medium">
+        <p className="text-center mt-4 text-sm md:text-lg text-black font-medium">
           Discover delicious recipes from around the world!
         </p>
-        <div className="flex justify-center mt-7 items-center">
-          <form onSubmit={searchItem}>
+        {/* <div className="flex justify-center mt-7 items-center"> */}
+          <form onSubmit={searchItem} className="flex justify-center mt-7 items-center">
             <input
               type="text"
-              className="border-2 border-gray-500 focus:outline-none focus:border-cyan-900 w-85 px-3 py-1.5 text-xl text-cyan-950 rounded-full "
+              className="border-2 border-gray-500 focus:outline-none focus:border-cyan-900 md:w-85 w-65 px-3 md:py-1.5 py-1 text-xl text-cyan-950 rounded-full "
               placeholder="Search for Recipes..."
               value={item}
               onChange={(e) => setItem(e.target.value)}
             />
             <button
               type="submit"
-              className="bg-cyan-950 px-3.5 text-md py-3 ml-3.5 rounded-full hover:bg-black"
+              className="bg-cyan-950 md:px-3.5 px-2.5 py-2 text-md md:py-3 md:ml-3.5 ml-1.5 rounded-full hover:bg-black"
             >
               🔍
             </button>
           </form>
-        </div>
+        {/* </div> */}
       </div>
 
       {/* .........output......... */}
@@ -112,7 +112,7 @@ useEffect(() => {
               // src="../../public/Kitchen appliances-rafiki.svg"
               src="/Kitchen appliances-rafiki.svg"
               alt="kitchen-svg"
-              className="w-[35%]"
+              className="md:w-[35%] md:h-auto h-[70%] w-auto"
             />
           </div>
         )}
