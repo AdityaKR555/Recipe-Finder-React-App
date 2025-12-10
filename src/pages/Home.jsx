@@ -122,7 +122,7 @@ useEffect(() => {
               Try again with Correct Spelling...
             </p>
             <img
-              src="../../public/Kitchen appliances-rafiki.svg"
+              src="/Kitchen appliances-rafiki.svg"
               alt="kitchen-svg"
               className="w-[35%]"
             />
